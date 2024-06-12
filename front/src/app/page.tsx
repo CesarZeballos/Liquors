@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "@/components/carousel/Carousel";
 // import BannerProducts from "@/components/bannerProductHome/banner";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import BannerGin from "@/components/bannerGin/BannerGin";
+import BannerGin from "@/components/bannerGin/bannerGin";
 import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
 
 export default function Landing() {
