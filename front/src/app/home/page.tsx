@@ -1,39 +1,49 @@
+import Carousel from "@/components/carousel/Carousel";
+import BannerProducts from "@/components/bannerProductHome/banner";
 import React from "react";
-
-import SquareWineLanding from "@/components/squareLanding/SquareWineLanding";
-import SquareWhiskeyLanding from "@/components/squareLanding/SquareWhiskeyLanding";
-import HalfLanding from "@/components/halfLanding/HalfLanding";
-import SquareSpiritsLanding from "@/components/squareLanding/SquareSpiritsLanding";
-import SquareRumLanding from "@/components/squareLanding/SquareRumLanding";
-import MiddleLanding2 from "@/components/middleLanding/MiddleLanding2";
-import MiddleLanding from "@/components/middleLanding/MiddleLanding";
-import MiddleSlide from "@/components/middleLanding/MiddleSlide";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import BannerProductsGin from "@/components/bannerProductHome/bannerGin";
 import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
 
-const Home: React.FC = (): React.ReactNode => {
+export default function Home() {
   return (
-    <>
-      <div>
-        <div className="flex flex-row">
-          <HalfLanding />
-          {/*     <div className="grid grid-cols-2 ">
-            <SquareWineLanding />
-            <SquareWhiskeyLanding />
-            <SquareSpiritsLanding />
-            <SquareRumLanding />
-          </div> */}
+    <div>
+      <Carousel></Carousel>
+      
+      <div className="flex flex-col bg-greyMLfilter scroll-smooth overflow-auto pt-10 items-center">
+        {/*SECCION UNO DE TARJETAS (todas las categorias) */}
+        <h1 className="text-center text-2xl text-black font-plus-jakarta-sans font-normal mb-4">
+          Explore <b className="text-wine">all</b> categories
+        </h1>
+        <ExpandMoreIcon className="flex items-center" />
+        <div className="flex space-x-4">
+          <BannerProducts />
         </div>
-        <div>
-          <MiddleLanding2 />
-          <MiddleLanding />
+        
+        {/*SECCION DOS DE TARJETAS (solo gins) */}
+        <div className="w-full bg-black">
+          <h1 className="text-center font-plus-jakarta-sans text-2xl mt-6 text-white font-normal mb-4 relative z-10">
+            Only <b className="text-gin">Gins</b>
+          </h1>
         </div>
-        <div>
-          <MiddleSlide /> {/* la estoy laburanto atte: tomi */}
-          <SuscribeCards />
-        </div>
-      </div>
-    </>
-  );
-};
+        
+        <ExpandMoreIcon className="flex items-center mt-6" />
+          <div className="flex space-x-4">
+            {/*FILTRA DESDE EL BACK SOLO GIN */}
+            <BannerProductsGin />
+          </div>
 
-export default Home;
+         {/*SECCION TRES DE TARJETAS (aqui podria ir otra a eleccion*/}
+         <div className="w-full bg-grey4">
+
+          <h1 className="text-center font-plus-jakarta-sans text-2xl mt-6 text-white font-normal mb-4 relative z-10">
+            Only <b className="text-wine">Wines</b>
+          </h1>
+        </div>
+
+        <ExpandMoreIcon className="flex items-center mt-6" />
+      </div>
+      <SuscribeCards />
+    </div>
+  );
+}
