@@ -3,7 +3,7 @@ import Carousel from "@/components/carousel/Carousel";
 // import BannerProducts from "@/components/bannerProductHome/banner";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // import BannerProductsGin from "@/components/bannerProductHome/bannerGin";
-// import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
+import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
 
 export default function Landing() {
   return (
@@ -41,7 +41,7 @@ export default function Landing() {
 
         <ExpandMoreIcon className="flex items-center mt-6" />
       </div>
-      {/* <SuscribeCards /> */}
+      <SuscribeCards />
     </div>
   );
 }
