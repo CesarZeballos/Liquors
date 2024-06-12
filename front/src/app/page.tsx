@@ -1,9 +1,11 @@
 import React from "react";
 import Carousel from "@/components/carousel/Carousel";
-// import BannerProducts from "@/components/bannerProductHome/banner";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
-import BannerGin from "@/components/bannerGin/bannerGin";
+
+//importacion de banners.
+import Banner from "@/components/banner/banner";
+// import BannerGin from "@/components/bannerGin/bannerGin";
 
 export default function Landing() {
   return (
@@ -17,7 +19,7 @@ export default function Landing() {
         </h1>
         <ExpandMoreIcon className="flex items-center" />
         <div className="flex space-x-4">
-          {/* <BannerProducts /> */}
+          <Banner />
         </div>
 
         {/* SECCION DOS DE TARJETAS (solo gins) */}
@@ -29,7 +31,7 @@ export default function Landing() {
 
         <ExpandMoreIcon className="flex items-center mt-6" />
         <div className="flex space-x-4">
-          <BannerGin />
+          {/* <BannerGin /> */}
         </div>
 
         {/* SECCION TRES DE TARJETAS (aqui podria ir otra a eleccion) */}
