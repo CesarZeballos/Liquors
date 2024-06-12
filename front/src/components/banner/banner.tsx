@@ -8,7 +8,7 @@ import "tailwindcss/tailwind.css";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 
-const Banner = () => {
+export const Banner = () => {
   const scrollContainer = useRef<HTMLDivElement>(null);
   const [currentSection, setCurrentSection] = useState(0);
   const cardsPerPage = 3;

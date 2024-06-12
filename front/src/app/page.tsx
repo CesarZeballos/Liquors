@@ -4,7 +4,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
 
 //importacion de banners.
-// import Banner from "@/components/banner/banner";
+import Banner from "@/components/banner/banner";
 // import BannerGin from "@/components/bannerGin/bannerGin";
 
 export default function Landing() {
@@ -19,7 +19,7 @@ export default function Landing() {
         </h1>
         <ExpandMoreIcon className="flex items-center" />
         <div className="flex space-x-4">
-          {/* <Banner /> */}
+          <Banner />
         </div>
 
         {/* SECCION DOS DE TARJETAS (solo gins) */}
