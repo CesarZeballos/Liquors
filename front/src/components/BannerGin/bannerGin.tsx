@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "tailwindcss/tailwind.css";
 import { useSelector } from "react-redux";
 
-const BannerProductsGin: React.FC = () => {
+const BannerGin: React.FC = () => {
   const scrollContainer = useRef<HTMLDivElement>(null);
   const [currentSection, setCurrentSection] = useState(0);
   const cardsPerPage = 3;

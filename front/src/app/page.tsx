@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "@/components/carousel/Carousel";
 // import BannerProducts from "@/components/bannerProductHome/banner";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import BannerProductsGin from "@/components/bannerProductHome/bannerGin";
+import BannerGin from "@/components/bannerGin/BannerGin";
 import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
 
 export default function Landing() {
@@ -29,7 +29,7 @@ export default function Landing() {
 
         <ExpandMoreIcon className="flex items-center mt-6" />
         <div className="flex space-x-4">
-          <BannerProductsGin />
+          <BannerGin />
         </div>
 
         {/* SECCION TRES DE TARJETAS (aqui podria ir otra a eleccion) */}
