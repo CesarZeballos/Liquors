@@ -34,8 +34,8 @@ export const MapProductCardGin: React.FC = (): React.ReactNode => {
       <>
           {/*Mapea el arreglo de productos y renderiza un Card para cada uno*/}
             {ginProducts.map((product:any) => (
-              <Link href={`/product/${product.name}`}>
-                <p   onClick={() => detailProduct(product)}>
+              <Link key={product.id} href={`/product/${product.name}`}>
+                <p onClick={() => detailProduct(product)}>
                   <ProductCard key={product.id} product={product} />
                 </p>
               </Link>
