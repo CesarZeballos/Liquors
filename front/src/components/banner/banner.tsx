@@ -9,81 +9,82 @@ import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 
 const Banner = () => {
-  const scrollContainer = useRef<HTMLDivElement>(null);
-  const [currentSection, setCurrentSection] = useState(0);
-  const cardsPerPage = 3;
-  const dataGlobal = useSelector((state: any) => state.products.data);
-  const maxSections = Math.ceil(dataGlobal.length / cardsPerPage) - 1;
+  // const scrollContainer = useRef<HTMLDivElement>(null);
+  // const [currentSection, setCurrentSection] = useState(0);
+  // const cardsPerPage = 3;
+  // const dataGlobal = useSelector((state: any) => state.products.data);
+  // const maxSections = Math.ceil(dataGlobal.length / cardsPerPage) - 1;
 
-  const router = useRouter()
+  // const router = useRouter()
  
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollContainer.current) {
-      if (direction === "left" && currentSection > 0) {
-        setCurrentSection(currentSection - 1);
-      } else if (direction === "right" && currentSection < maxSections) {
-        setCurrentSection(currentSection + 1);
-      }
-    }
-  };
+  // const scroll = (direction: "left" | "right") => {
+  //   if (scrollContainer.current) {
+  //     if (direction === "left" && currentSection > 0) {
+  //       setCurrentSection(currentSection - 1);
+  //     } else if (direction === "right" && currentSection < maxSections) {
+  //       setCurrentSection(currentSection + 1);
+  //     }
+  //   }
+  // };
 
-  useEffect(() => {
-    if (scrollContainer.current) {
-      const scrollAmount = scrollContainer.current.offsetWidth;
-      scrollContainer.current.scrollTo({
-        left: currentSection * scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  }, [currentSection]);
+  // useEffect(() => {
+  //   if (scrollContainer.current) {
+  //     const scrollAmount = scrollContainer.current.offsetWidth;
+  //     scrollContainer.current.scrollTo({
+  //       left: currentSection * scrollAmount,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // }, [currentSection]);
 
   
 
   return (
-    <div className="relative flex justify-center flex-col pt-7 pb-4 bg-greyMLfilter w-11/12 max-w-screen-lg mx-auto">
-      <div className="relative flex justify-center items-center w-full">
-        {/*FLECHA IZQUIERDA*/}
-        <button
-          onClick={() => scroll("left")}
-          className="absolute left-0 mr-96 p-2 z-10"
-          disabled={currentSection === 0}
-        >
-          <div className="rounded-full bg-wine p-2 ">
-            <ArrowBackIosIcon className="h-6 w-6 text-white" />
-          </div>
-        </button>
+    <div></div>
+    // <div className="relative flex justify-center flex-col pt-7 pb-4 bg-greyMLfilter w-11/12 max-w-screen-lg mx-auto">
+    //   <div className="relative flex justify-center items-center w-full">
+    //     {/*FLECHA IZQUIERDA*/}
+    //     <button
+    //       onClick={() => scroll("left")}
+    //       className="absolute left-0 mr-96 p-2 z-10"
+    //       disabled={currentSection === 0}
+    //     >
+    //       <div className="rounded-full bg-wine p-2 ">
+    //         <ArrowBackIosIcon className="h-6 w-6 text-white" />
+    //       </div>
+    //     </button>
   
-        {/*FLECHA DERECHA*/}
-        <button
-          onClick={() => scroll("right")}
-          className="absolute right-0 p-2 z-10"
-          disabled={currentSection === maxSections}
-        >
-          <div className="rounded-full bg-wine p-2 ">
-            <ArrowForwardIosIcon className="h-6 w-6 text-white" />
-          </div>
-        </button>
+    //     {/*FLECHA DERECHA*/}
+    //     <button
+    //       onClick={() => scroll("right")}
+    //       className="absolute right-0 p-2 z-10"
+    //       disabled={currentSection === maxSections}
+    //     >
+    //       <div className="rounded-full bg-wine p-2 ">
+    //         <ArrowForwardIosIcon className="h-6 w-6 text-white" />
+    //       </div>
+    //     </button>
   
-        {/* Contenedor de tarjetas */}
-        <div ref={scrollContainer} className="flex overflow-hidden w-full">
-          <div className="flex space-x-4 transition-transform duration-500">
-            <MapProductCard />
-          </div>
-        </div>
-      </div>
+    //     {/* Contenedor de tarjetas */}
+    //     <div ref={scrollContainer} className="flex overflow-hidden w-full">
+    //       <div className="flex space-x-4 transition-transform duration-500">
+    //         <MapProductCard />
+    //       </div>
+    //     </div>
+    //   </div>
   
-      {/* Botón "Ver más" */}
-      {currentSection === maxSections && (
-        <div className="flex justify-end mt-4">
-          <button onClick={() => router.push("/product")} className="bg-wine text-white py-2 px-4 rounded-md">
-          Ver más
-            <LastPageIcon className="mr-1 ml-3" />
+    //   {/* Botón "Ver más" */}
+    //   {currentSection === maxSections && (
+    //     <div className="flex justify-end mt-4">
+    //       <button onClick={() => router.push("/product")} className="bg-wine text-white py-2 px-4 rounded-md">
+    //       Ver más
+    //         <LastPageIcon className="mr-1 ml-3" />
             
-          </button>
-        </div>
-      )}
-    </div>
+    //       </button>
+    //     </div>
+    //   )}
+    // </div>
   );
 }
 
