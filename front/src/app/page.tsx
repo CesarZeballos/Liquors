@@ -1,5 +1,5 @@
 import React from "react";
-// import Carousel from "@/components/carousel/Carousel";
+import Carousel from "@/components/carousel/Carousel";
 // import BannerProducts from "@/components/bannerProductHome/banner";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // import BannerProductsGin from "@/components/bannerProductHome/bannerGin";
@@ -8,7 +8,7 @@ import React from "react";
 export default function Landing() {
   return (
     <div>
-      {/* <Carousel /> */}
+      <Carousel />
 
       <div className="flex flex-col bg-greyMLfilter scroll-smooth overflow-auto pt-10 items-center">
         {/* SECCION UNO DE TARJETAS (todas las categorias) */}
