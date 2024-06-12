@@ -5,14 +5,14 @@ import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import LastPageIcon from '@mui/icons-material/LastPage';
 import "tailwindcss/tailwind.css";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 
 const Banner = () => {
   const scrollContainer = useRef<HTMLDivElement>(null);
   const [currentSection, setCurrentSection] = useState(0);
   const cardsPerPage = 3;
-  // const dataGlobal = useSelector((state: any) => state.products.data);
+  const dataGlobal = useSelector((state: any) => state.products.data);
   const maxSections = Math.ceil(dataGlobal.length / cardsPerPage) - 1;
 
   const router = useRouter()
