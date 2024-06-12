@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "@/components/carousel/Carousel";
-import BannerProducts from "@/components/bannerProductHome/banner";
-// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import BannerProducts from "@/components/bannerProductHome/banner";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 // import BannerProductsGin from "@/components/bannerProductHome/bannerGin";
 // import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
 
@@ -15,9 +15,9 @@ export default function Landing() {
         <h1 className="text-center text-2xl text-black font-plus-jakarta-sans font-normal mb-4">
           Explore <b className="text-wine">all</b> categories
         </h1>
-        {/* <ExpandMoreIcon className="flex items-center" /> */}
+        <ExpandMoreIcon className="flex items-center" />
         <div className="flex space-x-4">
-          <BannerProducts />
+          {/* <BannerProducts /> */}
         </div>
 
         {/* SECCION DOS DE TARJETAS (solo gins) */}
@@ -27,7 +27,7 @@ export default function Landing() {
           </h1>
         </div>
 
-        {/* <ExpandMoreIcon className="flex items-center mt-6" /> */}
+        <ExpandMoreIcon className="flex items-center mt-6" />
         <div className="flex space-x-4">
           {/* <BannerProductsGin /> */}
         </div>
@@ -39,7 +39,7 @@ export default function Landing() {
           </h1>
         </div>
 
-        {/* <ExpandMoreIcon className="flex items-center mt-6" /> */}
+        <ExpandMoreIcon className="flex items-center mt-6" />
       </div>
       {/* <SuscribeCards /> */}
     </div>
