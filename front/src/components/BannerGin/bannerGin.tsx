@@ -74,4 +74,4 @@ const BannerGin: React.FC = () => {
   );
 };
 
-export default BannerProductsGin;
+export default BannerGin;
