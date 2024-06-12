@@ -1,7 +1,7 @@
 import Carousel from "@/components/carousel/Carousel";
 import BannerProducts from "@/components/bannerProductHome/banner";
 import React from "react";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import BannerProductsGin from "@/components/bannerProductHome/bannerGin";
 import SuscribeCards from "@/components/suscribeCards/SuscribeCards";
 
@@ -15,7 +15,7 @@ export default function Landing() {
         <h1 className="text-center text-2xl text-black font-plus-jakarta-sans font-normal mb-4">
           Explore <b className="text-wine">all</b> categories
         </h1>
-        <ExpandMoreIcon className="flex items-center" />
+        {/* <ExpandMoreIcon className="flex items-center" /> */}
         <div className="flex space-x-4">
           <BannerProducts />
         </div>
@@ -27,7 +27,7 @@ export default function Landing() {
           </h1>
         </div>
         
-        <ExpandMoreIcon className="flex items-center mt-6" />
+        {/* <ExpandMoreIcon className="flex items-center mt-6" /> */}
           <div className="flex space-x-4">
             {/*FILTRA DESDE EL BACK SOLO GIN */}
             <BannerProductsGin />
@@ -41,7 +41,7 @@ export default function Landing() {
           </h1>
         </div>
 
-        <ExpandMoreIcon className="flex items-center mt-6" />
+        {/* <ExpandMoreIcon className="flex items-center mt-6" /> */}
       </div>
       <SuscribeCards />
     </div>
